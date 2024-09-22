@@ -38,6 +38,8 @@
                 <option value="Planning" <?php echo (isset($_POST['section']) && $_POST['section'] == 'Planning') ? 'selected' : ''; ?>>Planning</option>
                 <option value="Internal Audit" <?php echo (isset($_POST['section']) && $_POST['section'] == 'Internal Audit') ? 'selected' : ''; ?>>Internal Audit</option>
                 <option value="Admin" <?php echo (isset($_POST['section']) && $_POST['section'] == 'Admin') ? 'selected' : ''; ?>>Admin</option>
+                <option value="HR" <?php echo (isset($_POST['section']) && $_POST['section'] == 'HR') ? 'selected' : ''; ?>>HR</option>
+                <option value="IT" <?php echo (isset($_POST['section']) && $_POST['section'] == 'IT') ? 'selected' : ''; ?>>IT</option>
                 <option value="Admin (Transport)" <?php echo (isset($_POST['section']) && $_POST['section'] == 'Admin (Transport)') ? 'selected' : ''; ?>>Admin (Transport)</option>
                 <option value="Development" <?php echo (isset($_POST['section']) && $_POST['section'] == 'Development') ? 'selected' : ''; ?>>Development</option>
                 <option value="Accounts" <?php echo (isset($_POST['section']) && $_POST['section'] == 'Accounts') ? 'selected' : ''; ?>>Accounts</option>
