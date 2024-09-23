@@ -41,7 +41,8 @@ $model = $_POST['model'];
     
         if(mysqli_query($conn, $sql_query))
         {
-            echo "Added Successfully";
+            // echo "Added Successfully";
+            header('location:display.php');
         }
     
         else

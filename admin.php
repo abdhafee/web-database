@@ -29,7 +29,7 @@
     </nav>
 
     <!--Header-->
-    <div style="background-image: url(.//vVY8PJ.jpg);" class="bgimg"></div>
+    <div style="background-image: url(.//developing.webp);" class="bgimg"></div>
     
     <ul>
     <li><a href="#">Home</a></li>

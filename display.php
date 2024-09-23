@@ -106,38 +106,59 @@
                         <th>VG_Active_date</th>
                         <th>VG_Expire_date</th>
                         <th>Virus_guard_model</th>
+                        <th>Operations</th>
                     </tr>";
 
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>
-                        <td>".$row["Serial_number"]."</td>
-                        <td>".$row["User_name"]."</td>
-                        <td>".$row["Ram_Rom"]."</td>
-                        <td>".$row["Processor"]."</td>
-                        <td>".$row["Generation"]."</td>
-                        <td>".$row["SSD"]."</td>
-                        <td>".$row["Hard_disk"]."</td>
-                        <td>".$row["NIC_card"]."</td>
-                        <td>".$row["PC_model"]."</td>
-                        <td>".$row["Country"]."</td>
-                        <td>".$row["Operating_system"]."</td>
-                        <td>".$row["Manufacture_year"]."</td>
-                        <td>".$row["Grapihic_card"]."</td>
-                        <td>".$row["IP_address"]."</td>
-                        <td>".$row["Section"]."</td>
-                        <td>".$row["Virus_guard"]."</td>
-                        <td>".$row["VG_Active_date"]."</td>
-                        <td>".$row["VG_Expire_date"]."</td>
-                        <td>".$row["Virus_guard_model"]."</td>
-                    </tr>";
-            }
-            echo "</table>";
-        } else {
-            echo "<p class='col'>No Records Found</p>";
-        }
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                                <td>".$row["Serial_number"]."</td>
+                                <td>".$row["User_name"]."</td>
+                                <td>".$row["Ram_Rom"]."</td>
+                                <td>".$row["Processor"]."</td>
+                                <td>".$row["Generation"]."</td>
+                                <td>".$row["SSD"]."</td>
+                                <td>".$row["Hard_disk"]."</td>
+                                <td>".$row["NIC_card"]."</td>
+                                <td>".$row["PC_model"]."</td>
+                                <td>".$row["Country"]."</td>
+                                <td>".$row["Operating_system"]."</td>
+                                <td>".$row["Manufacture_year"]."</td>
+                                <td>".$row["Grapihic_card"]."</td>
+                                <td>".$row["IP_address"]."</td>
+                                <td>".$row["Section"]."</td>
+                                <td>".$row["Virus_guard"]."</td>
+                                <td>".$row["VG_Active_date"]."</td>
+                                <td>".$row["VG_Expire_date"]."</td>
+                                <td>".$row["Virus_guard_model"]."</td>
+                                <td>
+                                <form method='POST' action='view.php' style='display:inline;'>
+                                <input type='hidden' name='serial_number' value='".$row["Serial_number"]."'>
+                                <button type='submit' name='update' style='background-color: black; padding:5px; width: 100px; font-weight: bold; border-radius: 10px; color: white;'>View</button>
+                                </form>
+                                </div>
+                                </td>
+                            </tr>";
+                        }
+                        echo "</table>";
+                    } 
+                    else {
+                    echo "<p class='col'>No Records Found</p>";
+                }
+                mysqli_close($conn);
+            ?>
 
-        mysqli_close($conn);
-        ?>
+        <script>
+        function toggleDetails(id) {
+        var detailsDiv = document.getElementById(id);
+        if (detailsDiv.style.display === "none") {
+        detailsDiv.style.display = "block";
+    } 
+        else {
+        detailsDiv.style.display = "none";
+    }
+}
+</script>
+
     </div>
     
     <!--Footer-->

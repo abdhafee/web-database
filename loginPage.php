@@ -25,9 +25,9 @@
     </nav>
 
     <!-- Header -->
-    <div style="background-image: url('developing.webp');" class="bgimg"></div>
+    <div class="bimg" style="background-image: url('developing.webp'); width: 100%; height: 500px; position: relative; margin-top: 10px;"></div>
     <div class="bg-img"></div>
-
+    
     <!-- Login Page -->
     <div class="login-box">
         <div class="login">
